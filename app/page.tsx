@@ -1,5 +1,7 @@
 import { AssetHealthSummary } from "@/components/dashboard/asset-health-summary";
+import { BuildingMap } from "@/components/dashboard/building-map";
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
+import { DeviceHealthAnalytics } from "@/components/dashboard/device-health-analytics";
 import { OrganizationOverview } from "@/components/dashboard/organization-overview";
 import { ProductUpdates } from "@/components/dashboard/product-updates";
 
@@ -31,6 +33,17 @@ export default function DashboardPage() {
 
           <DeviceHealthAnalytics />
         </div>
+        {/* Footer */}
+        <footer className="border-t pt-6 pb-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+            <p>&copy; 2026 SmartBuild. All rights reserved.</p>
+            <div className="flex items-center gap-4">
+              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-primary transition-colors">Contact</a>
+            </div>
+          </div>
+        </footer>
 
       </main>
     </div>
