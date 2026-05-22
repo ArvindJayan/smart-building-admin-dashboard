@@ -1,4 +1,5 @@
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
+import { OrganizationOverview } from "@/components/dashboard/organization-overview";
 
 
 export default function DashboardPage() {
@@ -14,6 +15,8 @@ export default function DashboardPage() {
             Monitor your smart buildings, assets, and device health in real-time.
           </p>
         </div>
+
+        <OrganizationOverview />
 
       </main>
     </div>
