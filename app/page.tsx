@@ -1,5 +1,7 @@
+import { AssetHealthSummary } from "@/components/dashboard/asset-health-summary";
 import { DashboardHeader } from "@/components/dashboard/dashboard-header";
 import { OrganizationOverview } from "@/components/dashboard/organization-overview";
+import { ProductUpdates } from "@/components/dashboard/product-updates";
 
 
 export default function DashboardPage() {
@@ -17,6 +19,18 @@ export default function DashboardPage() {
         </div>
 
         <OrganizationOverview />
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          <ProductUpdates />
+
+          <AssetHealthSummary />
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          <BuildingMap />
+
+          <DeviceHealthAnalytics />
+        </div>
 
       </main>
     </div>
