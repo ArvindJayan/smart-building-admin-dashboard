@@ -39,7 +39,6 @@ export async function fetchDeviceHealth(): Promise<DeviceHealthData[]> {
     return fetchWithDelay<DeviceHealthData[]>("/data/device-health.json", 1600);
 }
 
-// Simulate an error for demonstration (can be used for error handling demo)
 export async function fetchWithError(): Promise<never> {
     await delay(1000);
     throw new Error("Simulated API error - Unable to fetch data");

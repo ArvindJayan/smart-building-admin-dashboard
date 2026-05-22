@@ -4,6 +4,7 @@ import { DashboardHeader } from "@/components/dashboard/dashboard-header";
 import { DeviceHealthAnalytics } from "@/components/dashboard/device-health-analytics";
 import { OrganizationOverview } from "@/components/dashboard/organization-overview";
 import { ProductUpdates } from "@/components/dashboard/product-updates";
+import { SystemAlerts } from "@/components/dashboard/system-alerts";
 
 
 export default function DashboardPage() {
@@ -32,6 +33,9 @@ export default function DashboardPage() {
           <BuildingMap />
 
           <DeviceHealthAnalytics />
+
+          <SystemAlerts />
+
         </div>
         {/* Footer */}
         <footer className="border-t pt-6 pb-4">
