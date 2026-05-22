@@ -6,10 +6,8 @@ import {
     ProductUpdate,
 } from "./types";
 
-// Simulated network delay
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// Generic fetch function with simulated latency
 async function fetchWithDelay<T>(url: string, delayMs: number = 1500): Promise<T> {
     await delay(delayMs);
     const response = await fetch(url);

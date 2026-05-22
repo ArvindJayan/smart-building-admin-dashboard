@@ -58,7 +58,6 @@ export function DeviceHealthAnalytics() {
         );
     }
 
-    // Calculate trends
     const latestMonth = data[data.length - 1];
     const previousMonth = data[data.length - 2];
     const healthyTrend = latestMonth && previousMonth
@@ -77,8 +76,8 @@ export function DeviceHealthAnalytics() {
                         <button
                             onClick={() => setChartType("area")}
                             className={`rounded-md px-3 py-1 text-sm transition-colors ${chartType === "area"
-                                    ? "bg-primary text-primary-foreground"
-                                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                                ? "bg-primary text-primary-foreground"
+                                : "bg-muted text-muted-foreground hover:bg-muted/80"
                                 }`}
                         >
                             Area
@@ -86,8 +85,8 @@ export function DeviceHealthAnalytics() {
                         <button
                             onClick={() => setChartType("bar")}
                             className={`rounded-md px-3 py-1 text-sm transition-colors ${chartType === "bar"
-                                    ? "bg-primary text-primary-foreground"
-                                    : "bg-muted text-muted-foreground hover:bg-muted/80"
+                                ? "bg-primary text-primary-foreground"
+                                : "bg-muted text-muted-foreground hover:bg-muted/80"
                                 }`}
                         >
                             Bar

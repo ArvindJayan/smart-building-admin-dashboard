@@ -8,7 +8,6 @@ import { MapPin } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 
-// Dynamically import the map component to avoid SSR issues
 const MapComponent = dynamic(() => import("./map-component"), {
     ssr: false,
     loading: () => <MapSkeleton />,

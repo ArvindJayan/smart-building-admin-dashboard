@@ -11,7 +11,6 @@ interface MapComponentProps {
     buildings: Building[];
 }
 
-// Custom marker icon
 const customIcon = new Icon({
     iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
     iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
@@ -23,13 +22,13 @@ const customIcon = new Icon({
 });
 
 export default function MapComponent({ buildings }: MapComponentProps) {
-    // Calculate center point based on all building locations
+
     const center: [number, number] = buildings.length > 0
         ? [
             buildings.reduce((sum, b) => sum + b.geoLocation[0], 0) / buildings.length,
             buildings.reduce((sum, b) => sum + b.geoLocation[1], 0) / buildings.length,
         ]
-        : [12.9716, 77.5946]; // Default to Bangalore
+        : [12.9716, 77.5946];
 
     return (
         <div className="h-[400px] w-full rounded-lg overflow-hidden border">
